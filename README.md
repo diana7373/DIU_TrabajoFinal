@@ -60,3 +60,179 @@ Si tuviera que resumir el nivel de experiencia adquirido, diría que parto de un
 Mi punto más débil, y a la vez mi mayor aprendizaje, está en la fase de evaluación: los resultados de SUS, Eye Tracking y accesibilidad demostraron que una propuesta visualmente diferenciadora puede introducir, sin pretenderlo, barreras que solo se detectan probando con usuarios reales y aplicando checklists normativas. Antes de esta práctica tendía a valorar un diseño por su impacto visual; ahora sé que ese impacto debe contrastarse con datos de uso y criterios verificables, y que "diseñar diferente" y "diseñar usable" no son sinónimos, aunque tampoco objetivos contrapuestos si se itera con esa información.
 
 Considero que he alcanzado un nivel intermedio-avanzado en investigación, personas, journey maps, design systems y prototipado (incluyendo IA generativa), y un nivel intermedio en evaluación de usabilidad y accesibilidad. Esta última es precisamente el área en la que me propongo seguir formándome: integrar revisiones de accesibilidad y pruebas con usuarios desde las primeras fases del proceso, y no solo al final, como ocurrió con Cyber-Gourmet.
+
+
+# PARTE II: Caso de Estudio — Propuesta de Diseño para el Ecomercado UGR
+
+**Diana Peven Kobtseva** | DIU 2025/26 | Grupo DIU3_Juashani
+
+---
+
+## 1. Contexto del caso
+
+El **Ecomercado UGR** es una iniciativa inaugurada el 26 de marzo de 2026 en los Paseíllos del Campus de Fuentenueva, impulsada por la Universidad de Granada y la Red Agroecológica de Granada. Se celebra el cuarto jueves de cada mes (9:30–14:00 h) y reúne a una quincena de productores locales (Somos Vega Somos Tierra, Cooperativa Valle y Vega, La Zarzamora, entre otros) bajo el paraguas del *Living Lab* **Granada Tierra Viva** (proyecto europeo SOILCRATES). Su propósito trasciende lo comercial: busca ser un espacio de sensibilización y conexión entre campo y ciudad.
+
+A fecha del análisis, el Ecomercado UGR **carece de presencia digital propia**: sin app ni web dedicada, la información se distribuye exclusivamente por redes sociales y medios institucionales. Este vacío es la oportunidad de diseño que aborda este informe.
+
+---
+
+## 2. Análisis del referente: Nuestras Huertas (nuestrashuertas.com)
+
+**Nuestras Huertas Sierra Norte** (Bustarviejo, Madrid) lleva más de diez años ofreciendo productos ecológicos certificados con reparto a domicilio, puntos de recogida y mercado presencial. Dispone de tienda online y blog.
+
+### 2.1 Revisión heurística (Nielsen)
+
+| # | Heurística | Punt. (0–4) | Observación |
+|---|-----------|------------|-------------|
+| H1 | Visibilidad del estado | 3 | Carrito claro; sin disponibilidad en tiempo real |
+| H2 | Correspondencia con el mundo real | 3 | Lenguaje cercano; vocabulario técnico para no iniciados |
+| H3 | Control y libertad | 2 | Pedido por Excel + email rompe el flujo digital |
+| H4 | Consistencia | 2 | Tienda online y Excel coexisten de forma confusa |
+| H5 | Prevención de errores | 2 | Sin validación ni aviso de agotados en el Excel |
+| H6 | Reconocimiento vs. recuerdo | 3 | Productos con imagen y nombre reconocibles |
+| H7 | Flexibilidad y eficiencia | 2 | Sin búsqueda ni filtros por temporada |
+| H8 | Diseño minimalista | 2 | Homepage densa; CTA principal diluido |
+| H9 | Ayuda ante errores | 2 | Sin mensajes de error; soporte solo por email |
+| H10 | Ayuda y documentación | 3 | Sección "Cómo comprar" clara |
+
+**Puntuación global estimada: 52/100 — Moderado/Mejorable.**
+
+### 2.2 Accesibilidad (WCAG 2.1 AA — principios POUR)
+
+| Principio | Hallazgo |
+|-----------|---------|
+| **Perceptible** | Contraste insuficiente en menú secundario (ratio < 4.5:1, criterio 1.4.3); imágenes sin `alt` descriptivo (1.1.1) |
+| **Operable** | Áreas clicables < 44×44 px en algunos botones (2.5.5) |
+| **Comprensible** | Bifurcación tienda/Excel sin señalización clara (3.3.2) |
+| **Robusto** | Sin `aria-label` en iconos de redes y carrito (4.1.2) |
+
+**Lighthouse estimado: 58–65/100.**
+
+### 2.3 Insights transferibles al Ecomercado UGR
+
+> **Insight 1 — Transparencia = confianza:** mostrar quién produce, cómo y dónde es diferencial en mercados ecológicos; la identidad del productor debe ser protagonista.
+
+> **Insight 2 — El flujo de pedido es el mayor cuello de botella:** cualquier fricción (Excel, email, llamada) expulsa al usuario digital, especialmente desde móvil.
+
+> **Insight 3 — El calendario es información crítica:** saber qué habrá antes de ir reduce la incertidumbre y aumenta la intención de asistencia.
+
+> **Insight 4 — El público universitario tiene expectativas digitales altas:** una interfaz desactualizada genera desconfianza en la calidad del propio producto.
+
+---
+
+## 3. Propuesta de valor para el Ecomercado UGR
+
+### 3.1 Persona
+
+**Lucía Mármol**, 22 años, estudiante de Biología en la UGR. Vive en piso compartido, se mueve en bici, le preocupa el origen de los alimentos. El móvil es su primer dispositivo para todo. No tiene coche y los jueves tiene clase si no lo planifica con antelación.
+
+**Necesidades clave:** saber qué habrá en el mercado antes del día; poder reservar si va a llegar tarde; conocer la historia de cada productor; recibir recordatorios sin buscar activamente.
+
+### 3.2 Value Proposition Canvas
+
+| Dolor del usuario | Acción propuesta | Métrica |
+|------------------|-----------------|---------|
+| No sabe qué habrá hasta que llega | Catálogo digital previo por edición | % de usuarios que visitan el catálogo antes del día |
+| Llega tarde y no encuentra producto | Pre-reserva con recogida en el puesto | Nº de reservas por edición |
+| No conoce a los productores | Fichas de productor con historia y valores | Tiempo en fichas de productor |
+| No se entera de la fecha | Recordatorio push/email | Tasa de apertura |
+
+**Propósito:** *"Conectar a la comunidad universitaria con los productores agroecológicos de Granada, haciendo del Ecomercado UGR una experiencia accesible y anticipable, tanto si puedes venir como si no."*
+
+### 3.3 Arquitectura de la información (Sitemap — App móvil)
+
+```
+Ecomercado UGR (App)
+├── Inicio · próxima edición + CTA "Quiero ir" / "Reservar"
+├── Productores · listado con filtro por tipo y comarca
+│   └── Ficha de productor (historia, certificaciones, productos)
+├── Catálogo · filtro por temporada / tipo / productor
+│   └── Detalle de producto → [Reservar]
+├── Mi reserva · resumen + confirmación de recogida
+├── Ediciones anteriores · archivo por edición
+└── Sobre el Ecomercado · qué es · cómo participar
+```
+
+### 3.4 Boceto (flujo principal — App móvil)
+
+La propuesta se orienta a **app móvil** porque el perfil dominante (universitario, 18–30 años) accede principalmente desde smartphone y la periodicidad mensual justifica notificaciones *push*.
+
+```
+┌─────────────────────────────┐   ┌─────────────────────────────┐
+│  🌿 ECOMERCADO UGR          │   │  🛒 Catálogo · Junio 2026   │
+│  Jueves 26 jun · 9:30–14h   │   │  [Verdura] [Fruta] [Otro]   │
+│  Paseíllos de Fuentenueva   │   │                             │
+│                             │   │  🥕 Zanahorias baby         │
+│  [Ver catálogo]             │   │     La Zarzamora · Órgiva   │
+│  [Conoce los productores]   │   │     [+ Info]  [Reservar]    │
+│                             │   │                             │
+│  ⏰ Faltan 11 días          │   │  🍅 Tomate rama             │
+│  [Activar recordatorio]     │   │     Somos Vega Somos Tierra │
+│                             │   │     [+ Info]  [Reservar]    │
+└─────────────────────────────┘   └─────────────────────────────┘
+
+┌─────────────────────────────┐   ┌─────────────────────────────┐
+│  [← Volver]                 │   │  🛍 Mi reserva              │
+│  La Zarzamora               │   │                             │
+│  📍 Órgiva, Alpujarra       │   │  Zanahorias baby x1 — 1,5€ │
+│                             │   │  Tomate rama   x2 — 3,0€   │
+│  ✅ Certificación ecológica │   │                             │
+│  🌱 Producción propia       │   │  Recogida: jue 26 jun 9:30  │
+│                             │   │                             │
+│  En esta edición:           │   │  [Confirmar reserva]        │
+│  · Zanahorias · Remolacha   │   │  (Se abona en el puesto)    │
+│  [Reservar productos]       │   │                             │
+└─────────────────────────────┘   └─────────────────────────────┘
+```
+
+---
+
+## 4. Justificación de decisiones de diseño
+
+Cada decisión se vincula a un principio concreto, sin valoraciones subjetivas:
+
+- **Nielsen H1 (Visibilidad del estado):** la cuenta atrás en el inicio garantiza que el usuario siempre sepa cuándo es el próximo mercado, resolviendo el problema detectado en el referente.
+- **Nielsen H5 (Prevención de errores):** la reserva sin pago previo elimina la fricción del Excel y permite cancelar sin consecuencias; la selección guiada evita errores de relleno.
+- **Nielsen H6 (Reconocimiento vs. recuerdo):** las fichas de productor muestran toda la información relevante en el momento de decisión; el usuario no necesita recordar quién vende qué.
+- **Ley de Hick:** los filtros por categoría reducen las opciones visibles simultáneamente, acortando el tiempo de decisión para un usuario que dispone de tiempo limitado.
+- **WCAG 2.1 AA:** la propuesta incorpora desde el inicio contraste > 4.5:1, áreas táctiles ≥ 44×44 px y etiquetas ARIA en elementos de acción, corrigiendo los déficits detectados en el referente.
+- **ISO 9241-210 (DCU):** la persona y el Value Proposition Canvas aseguran que cada funcionalidad responde a una necesidad real medible, no a una preferencia del diseñador.
+
+---
+
+## 5. Autoevaluación: prácticas y transferencia al caso real
+
+### 5.1 Técnicas aplicadas
+
+| Técnica | Práctica origen | Uso en este caso |
+|---------|----------------|-----------------|
+| Revisión heurística (Nielsen) | P1 | Análisis de Nuestras Huertas con criterio por ítem |
+| Persona | P1 | Lucía Mármol → funcionalidades concretas |
+| Insights / Mapa de empatía | P2 | Tensión anticipación vs. incertidumbre |
+| Value Proposition Canvas | P2 | Dolor → acción → métrica |
+| Sitemap | P2 | Arquitectura orientada a la propuesta de valor |
+| Wireframes baja fidelidad | P3 | Bocetos de las 4 pantallas del flujo principal |
+| Auditoría WCAG (POUR) | P5 | Análisis del referente + decisiones de diseño accesible |
+
+### 5.2 Qué hubiera sido interesante aplicar
+
+**Card Sorting y Tree Testing:** el sitemap se elaboró a partir del análisis, pero no se validó con usuarios reales. Un card sorting con 10–15 personas del perfil universitario habría verificado si la categorización del catálogo responde a sus modelos mentales.
+
+**Pruebas de usabilidad con usuarios:** los bocetos no han sido testeados. Como aprendí en P5, un diseño que parece claro en papel puede generar fricción real; un test con 5 usuarios habría validado si el flujo de reserva es intuitivo.
+
+**Prototipo Hi-Fi y Design System:** el paso lógico sería un sistema de componentes coherente con la identidad visual de la UGR (verde institucional, tipografía accesible) y un prototipo en Figma para pruebas con interacciones reales.
+
+### 5.3 Reflexión final
+
+La diferencia entre Cyber-Gourmet y el Ecomercado UGR es que el segundo tiene usuarios reales, productores reales y un contexto institucional que condiciona las decisiones. Lo que las prácticas de DIU me aportaron es un **método**: no empezar por la interfaz sino por la investigación, no decidir por gusto sino por criterio verificable, y no dar el diseño por terminado hasta probarlo con datos. La lección que traslado directamente: diferenciarse visualmente y ser usable no son objetivos opuestos, pero el segundo debe preceder siempre al primero.
+
+---
+
+## Referencias
+
+- Nielsen, J. (1994). *10 Usability Heuristics for User Interface Design*. NNGroup.
+- W3C. (2018). *Web Content Accessibility Guidelines (WCAG) 2.1*. https://www.w3.org/TR/WCAG21/
+- Garrett, J. J. (2011). *The Elements of User Experience* (2ª ed.). New Riders.
+- ISO 9241-210:2019. *Human-centred design for interactive systems*.
+- Canal UGR. (2026, 26 de marzo). *Primer Ecomercado UGR junto a la Red Agroecológica de Granada*. https://canal.ugr.es
+- Nuestras Huertas Sierra Norte. (2025). *nuestrashuertas.com* [Sitio web analizado].
