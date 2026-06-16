@@ -157,33 +157,7 @@ Ecomercado UGR (App)
 
 La propuesta se orienta a **app móvil** porque el perfil dominante (universitario, 18–30 años) accede principalmente desde smartphone y la periodicidad mensual justifica notificaciones *push*.
 
-```
-┌─────────────────────────────┐   ┌─────────────────────────────┐
-│  🌿 ECOMERCADO UGR          │   │  🛒 Catálogo · Junio 2026   │
-│  Jueves 26 jun · 9:30–14h   │   │  [Verdura] [Fruta] [Otro]   │
-│  Paseíllos de Fuentenueva   │   │                             │
-│                             │   │  🥕 Zanahorias baby         │
-│  [Ver catálogo]             │   │     La Zarzamora · Órgiva   │
-│  [Conoce los productores]   │   │     [+ Info]  [Reservar]    │
-│                             │   │                             │
-│  ⏰ Faltan 11 días          │   │  🍅 Tomate rama             │
-│  [Activar recordatorio]     │   │     Somos Vega Somos Tierra │
-│                             │   │     [+ Info]  [Reservar]    │
-└─────────────────────────────┘   └─────────────────────────────┘
-
-┌─────────────────────────────┐   ┌─────────────────────────────┐
-│  [← Volver]                 │   │  🛍 Mi reserva              │
-│  La Zarzamora               │   │                             │
-│  📍 Órgiva, Alpujarra       │   │  Zanahorias baby x1 — 1,5€ │
-│                             │   │  Tomate rama   x2 — 3,0€   │
-│  ✅ Certificación ecológica │   │                             │
-│  🌱 Producción propia       │   │  Recogida: jue 26 jun 9:30  │
-│                             │   │                             │
-│  En esta edición:           │   │  [Confirmar reserva]        │
-│  · Zanahorias · Remolacha   │   │  (Se abona en el puesto)    │
-│  [Reservar productos]       │   │                             │
-└─────────────────────────────┘   └─────────────────────────────┘
-```
+https://last-berry-33378134.figma.site/
 
 ---
 
